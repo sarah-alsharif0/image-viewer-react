@@ -1,0 +1,99 @@
+.form-container{
+    position: fixed;
+    background: #00000050;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+.form{
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    height: auto;
+    max-height: 70vh;
+    margin-top: 13vh;
+    background: #fff;
+    border-radius: 4px;
+    padding: 20px;
+    border: 1px solid #999;
+}
+.form-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1.5px solid rgba(148, 147, 147, 0.8);
+    padding-bottom: 15px;
+}
+.form-header b{
+    color: rgb(99, 58, 58);
+}
+.close-icon {
+    cursor: pointer;
+    color: white;
+    background: rgba(99, 58, 58, 0.7);
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: 1px solid #999;
+    font-size: 20px;
+}
+.close-icon:hover{
+    background:rgb(92, 64, 64);
+}
+.form-inputs{
+    width: 70%;
+    margin: 50px auto;
+    font-size: 20px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+.form-inputs label{
+    margin:10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-inputs input{
+    align-self: flex-end;
+    width: 50%;
+    height: 30px;
+}
+.form-buttons{
+    display: flex;
+    justify-content: flex-end;
+    margin:0 50px 50px 0;
+}
+.cancel-btn{
+    letter-spacing: 1.5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 12px 10px;
+    background-color: rgb(124, 121, 121);
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.save-btn{
+    letter-spacing: 1.5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 12px 10px;
+    background-color: rgb(99, 58, 58);
+    color: white;
+    cursor: pointer;
+}
+.save-btn:hover{
+    background-color:rgb(133, 98, 98);
+}
+.cancel-btn:hover{
+    background-color:rgb(167, 165, 165);
+}

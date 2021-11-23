@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.book-title{
+    color: brown;
+    margin: 20px 0;
+}
+.book-card{
+    background-color: white;
+    padding-bottom: 15px;
+    border:1px solid rgb(192, 196, 192);
+    width: 300px;
+    text-align: center;
+    margin: 20px 30px;
+    font-size: 16px;
+    box-shadow: 1px 3px 12px -1px rgba(0,0,0,0.55);
+}
+.book-image{
+    width: 80%;
+    margin-bottom: 10px;
+}
+.borrow-button{
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 12px 10px;
+    background-color: rgb(99, 58, 58);
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.borrow-button:hover{
+    background-color: rgb(134, 80, 80);
+}

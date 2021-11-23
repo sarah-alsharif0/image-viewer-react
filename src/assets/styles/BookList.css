@@ -1,0 +1,7 @@
+.books-container{
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+    justify-content: center;
+    margin:110px 10px;
+}

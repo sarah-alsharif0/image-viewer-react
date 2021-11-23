@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,700;1,700&family=Mochiy+Pop+One&display=swap');
+.navbar{
+    box-sizing: border-box;
+    background-color: rgb(235, 235, 235);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 0 12px 0 rgba(88, 88, 88, 0.55);
+}
+.logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    margin: 0 20px;
+    background:none;
+    width: 70px;
+}
+.website-title{
+    font-family: 'Mochiy Pop One', sans-serif;
+    letter-spacing: 1px;
+    color: rgb(99, 58, 58);
+}
+.button{
+    text-decoration: none;
+    letter-spacing: 1.5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: rgb(99, 58, 58);
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 0px;
+}
+@media only screen and (max-width: 600px) {
+    .logo{
+        width: 50px;
+    }
+    .website-title{
+        font-size: 15px;
+    }
+    .login-button{
+        font-size: 15px;
+        padding: 12px 15px;
+    }
+}
