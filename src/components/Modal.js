@@ -20,7 +20,6 @@ export const Modal = (props) => {
         alert('fields cannot be empty!')
     else {
     props.handleBorrow(studentInfo);
-    console.log(studentInfo);
 }
   };
   const handleCancel = () => {
@@ -30,7 +29,6 @@ export const Modal = (props) => {
       returnDate: new Date(),
     });
     props.handleClose(-1);
-    console.log(studentInfo);
   };
   return (
     <div className="form-container">

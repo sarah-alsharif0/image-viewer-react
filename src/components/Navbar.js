@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom';
 import '../assets/styles/Navbar.css';
 import logo from '../assets/images/library-logo.png';
 
 export const Navbar = () => {
     const [date,setDate] = useState(new Date().toDateString())
+    useEffect(() => {
+        setInterval(() => setDate(new Date()), 30000);
+      }, []);
+    
     return (
             <nav className="navbar">
                 <div className="logo-container">

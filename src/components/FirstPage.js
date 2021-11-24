@@ -10,6 +10,7 @@ export const FirstPage = (props) => {
     const [currBook, setCurrBook] = useState(-1);
 
     useEffect(() => {
+        
         if(books.length === 0)
          getBooks().then((tmpBooks) => {
            setBooks(tmpBooks.data);
@@ -28,7 +29,6 @@ export const FirstPage = (props) => {
       localStorage.borrowedBooks = JSON.stringify(borrowedBooks);
 
       togglePopup(-1);
-      console.log(borrowedBooks);
     }
     
 

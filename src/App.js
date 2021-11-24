@@ -8,7 +8,6 @@ function App() {
 
   const handleBorrow =(book) => {
       setBorrowedBooks([...borrowedBooks, book]);
-      console.log(borrowedBooks);
   }
   return (
     <div className="App">
