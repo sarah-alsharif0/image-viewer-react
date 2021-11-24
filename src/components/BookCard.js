@@ -2,11 +2,9 @@ import React from 'react'
 import '../assets/styles/BookCard.css'
 
 export const BookCard = (props) => {
-    const {book, books, handleClick,index } = props;
+    const {book, handleClick,index } = props;
     const handleSubmit = () => {
-        handleClick();
-        // handleBorrow(books[index]);
-        console.log(books[index]);
+        handleClick(index);
     }
     return (
         <div className="book-card">

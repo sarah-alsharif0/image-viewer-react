@@ -7,14 +7,8 @@ import {getBooks} from '../services/books'
 export const FirstPage = (props) => {
     const [isOpen, setIsOpen] = useState(false);
     const [books,setBooks] = useState([]);
-    const [borrowedBook, setBorrowedBook] = useState({
-      studentInfo : {},
-      bookInfo : {}
-    })
-    const handleBorrow = (studentInfo,bookInfo) => {
-      
-    }
-    
+    const [currBook, setCurrBook] = useState(-1);
+
     useEffect(() => {
         if(books.length === 0)
          getBooks().then((tmpBooks) => {
@@ -22,12 +16,30 @@ export const FirstPage = (props) => {
          });
        },[books]);
 
-    const togglePopup = () => {
-    setIsOpen(!isOpen);
+    const handleBorrow = (data) => {
+
+      const borrowedBooks = JSON.parse(localStorage.borrowedBooks || '[]');
+      
+      borrowedBooks.push({
+        studentInfo: data,
+        bookInfo: books[currBook]
+      });
+
+      localStorage.borrowedBooks = JSON.stringify(borrowedBooks);
+
+      togglePopup(-1);
+      console.log(borrowedBooks);
+    }
+    
+
+
+    const togglePopup = (index) => {
+      setIsOpen(!isOpen);
+      setCurrBook(index);
   }
     return (
         <div>
-            {isOpen && <Modal handleClose={togglePopup}/>}
+            {isOpen && <Modal handleBorrow={handleBorrow} handleClose={togglePopup}/>}
             <Navbar/>
             <BookList  books={books} handleClick={togglePopup}/>
         </div>
